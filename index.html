@@ -84,74 +84,6 @@
   <h3 class="title">I’ve always been a great problem solver,<br>a technophile obsessed with the latest devices.<br>
     </h3>
   <p class="subp">I am passionate about my work. I’m always looking for an opportunity to do better and achieve greatness.</p>
-</div>
-
-<style>
-
-        /* form design */
-        input, textarea, button[type="submit"]{
-          border-radius: 20px;
-          background: #FEF4F2;
-          color: black;
-          border: 1px solid rgba(0, 0, 0, 0.2);
-          display: flex;
-          justify-content: center;
-          width: 400px;
-        
-        }
-        
-        textarea{
-        width: 400px;
-        height: 180px;
-        text-indent: 20px;
-        color: black;	
-        justify-content: center;
-        margin: 10px auto;
-        
-        }
-        
-        input[type="text"]{
-          
-          height: 40px;
-          margin: 10px auto;
-          color: black;
-          justify-content: center;
-        }
-        
-        input {
-          text-indent:20px;
-          color: black;
-        }
-        input[type="email"]{
-          
-          height: 40px;
-          margin: 10px auto;
-          color: black;
-        
-        }
-        input[type="number"]{
-          
-          height: 40px;
-          margin: 10px auto;
-          color: black;	
-        }
-        input[type="submit"]{
-          height: 40px;
-          margin: 20px auto;
-          background: #0c43da;
-          width: 300px;
-        }
-        #submit:hover{
-        background-color: #e72475;
-        }
-        
-
-        }
-        </style>
-
-
-<div></div>
-    <div></div>
 
  <!-- connect me -->
  <div id="contactMe" class="section">
@@ -175,24 +107,9 @@
       </div>
     </div>
   </div>
-
-    <script>
-    const scriptURL = 'https://script.google.com/macros/s/AKfycbyY3ADxOPDkuewyTiAnyUL-wIY6Heauht20xkmdSFAMxT_lT-KdlDocV7xlDnRT0AZo/exec'
-  
-  
-  const form = document.forms['contact-form']
-  
-  
-  form.addEventListener('submit', e => {
-    e.preventDefault()
-    fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-    .then(response => alert("Thank you! your form is submitted successfully." ))
-    .then(() => { window.location.reload(); })
-    .catch(error => console.error('Error!', error.message))
-  })
-    </script>
-
     
+</div>
+  
 <script src="script.js"></script>
 </body>
 </html>
