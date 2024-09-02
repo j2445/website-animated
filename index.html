@@ -86,7 +86,112 @@
   <p class="subp">I am passionate about my work. I’m always looking for an opportunity to do better and achieve greatness.</p>
 </div>
 
+<style>
 
+        /* form design */
+        input, textarea, button[type="submit"]{
+          border-radius: 20px;
+          background: #FEF4F2;
+          color: black;
+          border: 1px solid rgba(0, 0, 0, 0.2);
+          display: flex;
+          justify-content: center;
+          width: 400px;
+        
+        }
+        
+        textarea{
+        width: 400px;
+        height: 180px;
+        text-indent: 20px;
+        color: black;	
+        justify-content: center;
+        margin: 10px auto;
+        
+        }
+        
+        input[type="text"]{
+          
+          height: 40px;
+          margin: 10px auto;
+          color: black;
+          justify-content: center;
+        }
+        
+        input {
+          text-indent:20px;
+          color: black;
+        }
+        input[type="email"]{
+          
+          height: 40px;
+          margin: 10px auto;
+          color: black;
+        
+        }
+        input[type="number"]{
+          
+          height: 40px;
+          margin: 10px auto;
+          color: black;	
+        }
+        input[type="submit"]{
+          height: 40px;
+          margin: 20px auto;
+          background: #0c43da;
+          width: 300px;
+        }
+        #submit:hover{
+        background-color: #e72475;
+        }
+        
+
+        }
+        </style>
+
+
+
+
+ <!-- connect me -->
+ <div id="contactMe" class="section">
+    <div class="container-fluid">
+      <h2 style=" text-align: center;" class="title">CONTACT</h2>
+      <div class="contact-section">
+        <div class="row img-sec justify-content-center">
+        
+          <div class="col-md-6">
+            <div class="form">
+              <form method="post" action="https://script.google.com/macros/s/AKfycbyY3ADxOPDkuewyTiAnyUL-wIY6Heauht20xkmdSFAMxT_lT-KdlDocV7xlDnRT0AZo/exec" name="contact-form">
+                <input type="text" name="your-name" placeholder="Name"><br>
+                <input type="text" name="your-number" placeholder="Number"><br>
+                <input type="email" name="your-email" placeholder="Email"><br>
+                <textarea name="message" rows="7" placeholder="Your Message"></textarea><br>
+                <input type="submit" value="Submit" id="submit">
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+    <script>
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbyY3ADxOPDkuewyTiAnyUL-wIY6Heauht20xkmdSFAMxT_lT-KdlDocV7xlDnRT0AZo/exec'
+  
+  
+  const form = document.forms['contact-form']
+  
+  
+  form.addEventListener('submit', e => {
+    e.preventDefault()
+    fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+    .then(response => alert("Thank you! your form is submitted successfully." ))
+    .then(() => { window.location.reload(); })
+    .catch(error => console.error('Error!', error.message))
+  })
+    </script>
+
+    
 <script src="script.js"></script>
 </body>
 </html>
